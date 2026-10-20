@@ -1,0 +1,4 @@
+# 이 파일을 ~/.zshrc.local로 복사해서 PC별 설정을 작성하세요.
+# export JAVA_HOME="/usr/lib/jvm/설치한-JDK"
+# path=("$JAVA_HOME/bin" $path)
+# export EDITOR=vim

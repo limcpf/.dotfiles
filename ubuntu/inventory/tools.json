@@ -1,0 +1,143 @@
+{
+  "zsh": {
+    "installed": true,
+    "path": "/usr/bin/zsh",
+    "version": "zsh 5.9 (aarch64-unknown-linux-gnu)",
+    "version_error": null
+  },
+  "starship": {
+    "installed": true,
+    "path": "/usr/local/bin/starship",
+    "version": "starship 1.27.0\nbranch:main\ncommit_hash:f8e4e21\nbuild_time:2026-10-17 09:19:37 +00:00\nbuild_env:rustc 1.99.1 (58cf8f9c3 2026-10-13),",
+    "version_error": null
+  },
+  "fzf": {
+    "installed": true,
+    "path": "/usr/bin/fzf",
+    "version": "0.67.0 (debian)",
+    "version_error": null
+  },
+  "zoxide": {
+    "installed": true,
+    "path": "/usr/bin/zoxide",
+    "version": "zoxide 0.9.8",
+    "version_error": null
+  },
+  "eza": {
+    "installed": true,
+    "path": "/usr/bin/eza",
+    "version": "eza - A modern, maintained replacement for ls\nv0.23.4 [+git]\nhttps://github.com/eza-community/eza",
+    "version_error": null
+  },
+  "batcat": {
+    "installed": true,
+    "path": "/usr/bin/batcat",
+    "version": "bat 0.25.0",
+    "version_error": null
+  },
+  "bat": {
+    "installed": false,
+    "path": null,
+    "version": null,
+    "version_error": null
+  },
+  "tmux": {
+    "installed": true,
+    "path": "/usr/bin/tmux",
+    "version": "tmux 3.6",
+    "version_error": null
+  },
+  "vim": {
+    "installed": true,
+    "path": "/usr/bin/vim",
+    "version": "VIM - Vi IMproved 9.1 (2024 Jan 02, compiled Aug 24 2026 22:11:12)\nIncluded patches: 1-948, 950-2141\nModified by team+vim@tracker.debian.org\nCompiled by team+vim@tracker.debian.org\nHuge version without GUI.  Features included (+) or not (-):\n+acl                 +jumplist            +sodium\n+arabic              +keymap              -sound\n+autocmd             +lambda              +spell\n+autochdir           +langmap             +startuptime\n-autoservername      +libcall             +statusline\n-balloon_eval        +linebreak           -sun_workshop\n+balloon_eval_term   +lispindent          +syntax\n-browse              +listcmds            +tabpanel\n++builtin_terms      +localmap            +tag_binary\n+byte_offset         -lua                 -tag_old_static\n+channel             +menu                -tag_any_white\n+cindent             +mksession           -tcl\n+clientserver        +modify_fname        +termguicolors\n-clipboard           +mouse               +terminal\n+clipboard_provider  -mouseshape          +terminfo\n+cmdline_compl       +mouse_dec           +termresponse\n+cmdline_hist        +mouse_gpm           +textobjects\n+cmdline_info        -mouse_jsbterm       +textprop\n+comments            +mouse_netterm       +timers\n+conceal             +mouse_sgr           +title\n+cryptv              -mouse_sysmouse      -toolbar\n+cscope              +mouse_urxvt         +user_commands\n+cursorbind          +mouse_xterm         +vartabs\n+cursorshape         +multi_byte          +vertsplit\n+dialog_con          +multi_lang          +vim9script\n+diff                -mzscheme            +viminfo\n+digraphs            +netbeans_intg       +virtualedit\n-dnd                 +num64               +visual\n-ebcdic              +packages            +visualextra\n+emacs_tags          +path_extra          +vreplace\n+eval                -perl                -wayland\n+ex_extra            +persistent_undo     -wayland_clipboard\n+extra_search        +popupwin            -wayland_focus_steal\n-farsi               +postscript          +wildignore\n+file_in_path        +printer             +wildmenu\n+find_in_path        +profile             +windows\n+float               -python              +writebackup\n+folding             +python3             -X11\n-footer              +quickfix            +xattr\n+fork()              +reltime             -xfontset\n+gettext             +rightleft           -xim\n-hangul_input        -ruby                -xpm\n+iconv               +scrollbind          -xsmp\n+insert_expand       +signs               -xterm_clipboard\n+ipv6                +smartindent         -xterm_save\n+job                 +socketserver        \n   system vimrc file: \"/etc/vim/vimrc\"\n     user vimrc file: \"$HOME/.vimrc\"\n 2nd user vimrc file: \"~/.vim/vimrc\"\n 3rd user vimrc file: \"~/.config/vim/vimrc\"\n      user exrc file: \"$HOME/.exrc\"\n       defaults file: \"$VIMRUNTIME/defaults.vim\"\n  fall-back for $VIM: \"/usr/share/vim\"\nCompilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H -Wdate-time -g -O2 -Werror=implicit-function-declaration -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/vim-xUjjyk/vim-9.1.2141=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -fdebug-prefix-map=/build/vim-xUjjyk/vim-9.1.2141=/usr/src/vim-2:9.1.2141-1ubuntu4.9 -DSYS_VIMRC_FILE=\\\"/etc/vim/vimrc\\\" -DSYS_GVIMRC_FILE=\\\"/etc/vim/gvimrc\\\" -D_REENTRANT -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 \nLinking: gcc -Wl,-Bsymbolic-functions -Wl,--package-metadata=%7B%22type%22:%22deb%22%2C%22os%22:%22ubuntu%22%2C%22name%22:%22vim%22%2C%22version%22:%222:9.1.2141-1ubuntu4.9%22%2C%22architecture%22:%22arm64%22%7D -flto=auto -ffat-lto-objects -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o vim -lm -ltinfo -lselinux -lsodium -lacl -lattr -lgpm -L/usr/lib/python3.14/config-3.14-aarch64-linux-gnu -lpython3.14 -ldl -lm",
+    "version_error": null
+  },
+  "nvim": {
+    "installed": false,
+    "path": null,
+    "version": null,
+    "version_error": null
+  },
+  "node": {
+    "installed": true,
+    "path": "/usr/bin/node",
+    "version": "v22.22.1",
+    "version_error": null
+  },
+  "npm": {
+    "installed": true,
+    "path": "/usr/bin/npm",
+    "version": "9.2.0",
+    "version_error": null
+  },
+  "java": {
+    "installed": false,
+    "path": null,
+    "version": null,
+    "version_error": null
+  },
+  "javac": {
+    "installed": false,
+    "path": null,
+    "version": null,
+    "version_error": null
+  },
+  "git": {
+    "installed": true,
+    "path": "/usr/bin/git",
+    "version": "git version 2.53.0",
+    "version_error": null
+  },
+  "curl": {
+    "installed": true,
+    "path": "/usr/bin/curl",
+    "version": "curl 8.18.0 (aarch64-unknown-linux-gnu) libcurl/8.18.0 OpenSSL/3.5.5 zlib/1.3.1 brotli/1.2.0 zstd/1.5.7 libidn2/2.3.8 libpsl/0.21.2 libssh2/1.11.1 nghttp2/1.68.0 librtmp/2.3 mit-krb5/1.22.1 OpenLDAP/2.6.10\nRelease-Date: 2026-01-07, security patched: 8.18.0-1ubuntu2.8\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp ws wss\nFeatures: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM PSL SPNEGO SSL threadsafe TLS-SRP UnixSockets zstd",
+    "version_error": null
+  },
+  "docker": {
+    "installed": true,
+    "path": "/mnt/c/Users/<windows-user>/AppData/Local/Programs/DockerDesktop/resources/bin/docker",
+    "version": null,
+    "version_error": {
+      "exit_code": 1,
+      "message": "The command 'docker' could not be found in this WSL 2 distro.\nWe recommend to activate the WSL integration in Docker Desktop settings.\n\nFor details about using Docker Desktop with WSL 2, visit:\n\nhttps://docs.docker.com/go/wsl2/"
+    }
+  },
+  "codex": {
+    "installed": true,
+    "path": "~/.local/bin/codex",
+    "version": "codex-cli 0.163.0",
+    "version_error": null
+  },
+  "atuin": {
+    "installed": false,
+    "path": null,
+    "version": null,
+    "version_error": null
+  },
+  "sheldon": {
+    "installed": false,
+    "path": null,
+    "version": null,
+    "version_error": null
+  },
+  "gh": {
+    "installed": false,
+    "path": null,
+    "version": null,
+    "version_error": null
+  },
+  "python3": {
+    "installed": true,
+    "path": "/usr/bin/python3",
+    "version": "Python 3.14.4",
+    "version_error": null
+  },
+  "snap": {
+    "installed": true,
+    "path": "/usr/bin/snap",
+    "version": "snap          2.76.3\nsnapd         2.76.3\nseries        16\nubuntu        26.04\nkernel        6.18.54.1-microsoft-standard-WSL2\narchitecture  arm64",
+    "version_error": null
+  }
+}

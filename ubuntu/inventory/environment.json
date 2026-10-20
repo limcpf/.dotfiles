@@ -1,0 +1,41 @@
+{
+  "captured_at_utc": "2026-10-20T13:54:48+00:00",
+  "os_release": {
+    "PRETTY_NAME": "Ubuntu 26.04.1 LTS",
+    "NAME": "Ubuntu",
+    "VERSION_ID": "26.04",
+    "VERSION": "26.04.1 LTS (Resolute Raccoon)",
+    "VERSION_CODENAME": "resolute",
+    "ID": "ubuntu",
+    "ID_LIKE": "debian",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "UBUNTU_CODENAME": "resolute",
+    "LOGO": "ubuntu-logo"
+  },
+  "kernel_release": "6.18.54.1-microsoft-standard-WSL2",
+  "architecture": "aarch64",
+  "dpkg_architecture": "arm64",
+  "foreign_architectures": [],
+  "wsl": true,
+  "default_shell": "/usr/bin/zsh",
+  "available_locales": [
+    "C",
+    "C.utf8",
+    "POSIX",
+    "ko_KR.utf8"
+  ],
+  "collector_locale": "LANG=C.UTF-8\nLANGUAGE=\nLC_CTYPE=\"C.UTF-8\"\nLC_NUMERIC=\"C.UTF-8\"\nLC_TIME=\"C.UTF-8\"\nLC_COLLATE=\"C.UTF-8\"\nLC_MONETARY=\"C.UTF-8\"\nLC_MESSAGES=\"C.UTF-8\"\nLC_PAPER=\"C.UTF-8\"\nLC_NAME=\"C.UTF-8\"\nLC_ADDRESS=\"C.UTF-8\"\nLC_TELEPHONE=\"C.UTF-8\"\nLC_MEASUREMENT=\"C.UTF-8\"\nLC_IDENTIFICATION=\"C.UTF-8\"\nLC_ALL=C.UTF-8",
+  "interactive_zsh_locale": "LANG=ko_KR.UTF-8\nLANGUAGE=ko_KR:ko\nLC_CTYPE=\"ko_KR.UTF-8\"\nLC_NUMERIC=\"ko_KR.UTF-8\"\nLC_TIME=\"ko_KR.UTF-8\"\nLC_COLLATE=\"ko_KR.UTF-8\"\nLC_MONETARY=\"ko_KR.UTF-8\"\nLC_MESSAGES=\"ko_KR.UTF-8\"\nLC_PAPER=\"ko_KR.UTF-8\"\nLC_NAME=\"ko_KR.UTF-8\"\nLC_ADDRESS=\"ko_KR.UTF-8\"\nLC_TELEPHONE=\"ko_KR.UTF-8\"\nLC_MEASUREMENT=\"ko_KR.UTF-8\"\nLC_IDENTIFICATION=\"ko_KR.UTF-8\"\nLC_ALL=ko_KR.UTF-8",
+  "installed_apt_package_count": 1027,
+  "git_default_branch": "main",
+  "terminal_reference": {
+    "baseline_host": "Windows Terminal",
+    "baseline_font": "CaskaydiaCove Nerd Font Mono",
+    "baseline_color_scheme": "IBM 5153",
+    "note": "최초 환경에서 별도로 확인한 값입니다. 이 수집 스크립트는 Windows 설정을 조회하지 않습니다."
+  },
+  "privacy": "사용자 이름, 이메일, 전체 환경 변수, 인증 설정과 사용 기록은 수집하지 않음"
+}

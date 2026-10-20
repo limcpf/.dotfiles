@@ -1,0 +1,5 @@
+# ubuntu 기준 원본 경로	홈 디렉터리 기준 대상 경로
+config/zsh/.zshrc	.zshrc
+config/vim/.vimrc	.vimrc
+config/tmux/.tmux.conf	.tmux.conf
+config/starship/starship.toml	.config/starship.toml

@@ -1,0 +1,10 @@
+{
+  "name": "Ubuntu-26.04",
+  "source": "Microsoft.WSL",
+  "hidden": false,
+  "commandline": "wsl.exe -d Ubuntu-26.04 -- tmux new-session -A -s main",
+  "font": {
+    "face": "CaskaydiaCove Nerd Font Mono"
+  },
+  "colorScheme": "IBM 5153"
+}

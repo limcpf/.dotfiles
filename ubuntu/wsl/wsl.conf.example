@@ -1,0 +1,6 @@
+[boot]
+systemd=true
+
+[user]
+# 실제 Linux 계정명으로 바꾸세요. Windows 사용자명과는 별개입니다.
+default=YOUR_LINUX_USER

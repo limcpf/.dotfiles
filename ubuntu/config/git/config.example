@@ -1,0 +1,6 @@
+# 선택적으로 참고할 설정입니다. 기존 ~/.gitconfig는 자동 교체하지 않습니다.
+[init]
+  defaultBranch = main
+[user]
+  name = YOUR_NAME
+  email = YOUR_EMAIL_OR_GITHUB_NOREPLY

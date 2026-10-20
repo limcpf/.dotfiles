@@ -1,0 +1,44 @@
+# 한국어 경로와 함께 사용하는 간결한 프롬프트
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$java\
+$cmd_duration\
+$line_break\
+$character"""
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+truncate_to_repo = true
+fish_style_pwd_dir_length = 1
+
+[git_branch]
+symbol = "git:"
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+format = '([$all_status$ahead_behind]($style) )'
+
+[nodejs]
+symbol = "node "
+format = "[$symbol($version) ]($style)"
+
+[java]
+symbol = "java "
+format = "[$symbol($version) ]($style)"
+
+[cmd_duration]
+min_time = 2_000
+format = "took [$duration](yellow) "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold cyan)"
+
+[time]
+disabled = true

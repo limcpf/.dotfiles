@@ -1,0 +1,15 @@
+{
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "actions": [],
+  "keybindings": [
+    { "id": "Terminal.CopyToClipboard", "keys": "ctrl+c" },
+    { "id": "Terminal.FindText", "keys": "ctrl+shift+f" },
+    { "id": "Terminal.PasteFromClipboard", "keys": "ctrl+v" },
+    { "id": "Terminal.DuplicatePaneAuto", "keys": "alt+shift+d" }
+  ],
+  "newTabMenu": [{ "type": "remainingProfiles" }],
+  "profiles": { "defaults": {} },
+  "schemes": [],
+  "themes": []
+}

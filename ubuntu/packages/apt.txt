@@ -1,0 +1,20 @@
+# 다른 Ubuntu에서도 설치할 편집·터미널 도구. 버전은 해당 Ubuntu 저장소를 사용합니다.
+bat
+ca-certificates
+curl
+eza
+fzf
+git
+language-pack-ko
+less
+locales
+ncurses-term
+nodejs
+npm
+python3
+tmux
+vim
+vim-runtime
+xdg-utils
+zoxide
+zsh

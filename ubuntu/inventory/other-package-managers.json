@@ -1,0 +1,10 @@
+{
+  "snap": {
+    "available": true,
+    "list": "No snaps are installed yet. Try 'snap install hello-world'."
+  },
+  "flatpak": {
+    "available": false,
+    "list": ""
+  }
+}
