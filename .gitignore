@@ -31,6 +31,7 @@ __pycache__/
 .cache/
 .local/
 .backups/
+.dotfiles-backups/
 .test-results/
 *.log
 *.zip

@@ -1,6 +1,6 @@
 # dotfiles
 
-Ubuntu의 터미널과 Markdown 작성 환경을 다른 PC에서도 복원하기 위한 개인 설정 저장소입니다. 2026-10-20까지 구성한 실제 파일과 설치 상태를 기준으로 만들었습니다. 운영체제별로 분리하며, 현재 설정은 모두 `ubuntu/`에 있습니다. 추후 Windows 전용 설정은 루트의 `windows/`로 확장하면 됩니다.
+터미널과 Markdown 작성 환경을 다른 PC에서도 복원하기 위한 개인 설정 저장소입니다. 2026-10-20까지 구성한 실제 파일과 설치 상태를 기준으로 만들었습니다. Ubuntu 설정은 `ubuntu/`, OS 공통 Codex 설정은 `common/codex/`로 분리합니다. 추후 Windows 전용 설정은 루트의 `windows/`로 확장하면 됩니다.
 
 ## 현재 환경과 구성
 
@@ -90,6 +90,8 @@ bash ubuntu/tests/vim-install.sh
 ```text
 dotfiles/
 ├── README.md
+├── common/
+│   └── codex/                   # OS 공통 모델 기본값·빠른 질문/개발 프로필·설치기
 └── ubuntu/
     ├── install.sh                # Ubuntu 복원 진입점
     ├── links.tsv                 # 원본 → 홈 디렉터리 연결 목록
@@ -277,9 +279,20 @@ git diff -- ubuntu/inventory
 
 현재 홈의 설정을 자동으로 마구 수집하지는 않습니다. 설정 변경은 `ubuntu/config/`에서 하고, 새 PC의 비밀값은 `*.local` 파일에 둡니다. 플러그인 버전을 변경할 때는 `.vimrc`의 커밋과 `locks/vim-plugins.tsv`를 함께 갱신하고 필요한 경우 npm lockfile도 갱신합니다. 기존 미리보기 플러그인의 의존성에는 npm 보안 경고가 있으므로, 최초 환경을 보존한 채 관련 내용은 [문제 해결 문서](ubuntu/docs/troubleshooting.md)에 기록했습니다.
 
+## Codex 공통 설정
+
+모델 설정은 [common/codex/README.md](common/codex/README.md)에 별도로 정리했습니다. 적용 후 기본 질문은 `gpt-6-luna` / `low`, `codex --profile dev`는 기존 `gpt-6.1-sol` / `max`를 사용합니다. 질문 내용에 따른 자동 전환은 아니며, 같은 대화에서는 `/model`로 전환합니다.
+
+```bash
+python3 common/codex/install.py --dry-run
+python3 common/codex/install.py
+```
+
+이 설치기는 기존 설정을 백업하고 모델 관련 두 항목만 병합합니다. Ubuntu 설치 스크립트와는 독립적으로 실행하며, 현재 사용자 설정이나 인증 파일을 저장소에 수집하지 않습니다. 모델과 프로필 형식은 [공식 모델 안내](https://learn.chatgpt.com/docs/models) 및 [프로필 문서](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles)를 기준으로 확인했습니다.
+
 ## GitHub에 올리기
 
-이 디렉터리는 `main` 브랜치의 로컬 Git 저장소로 초기화되어 있으며, 초기 커밋을 검토할 수 있도록 파일을 스테이징했습니다. 원격 저장소 생성과 업로드는 별도입니다.
+로컬 Git 저장소는 `main` 브랜치를 사용합니다. 추가하거나 변경한 파일을 검토한 뒤 커밋하세요. 원격 저장소 생성과 업로드는 별도입니다.
 
 ```bash
 cd ~/dev/dotfiles
