@@ -1,4 +1,4 @@
-# 한국어 경로와 함께 사용하는 간결한 프롬프트
+# Korean-friendly, compact prompt
 format = """
 $directory\
 $git_branch\
