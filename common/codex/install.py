@@ -79,7 +79,10 @@ def install(codex_dir, dry_run=False, profiles_only=False):
         tomllib.loads(desired)
         if name == "config.toml":
             desired = merge_defaults(current, desired)
-        if current == desired:
+        # 기본 설정에는 앱이 프로젝트 경로와 UI 상태를 기록할 수 있습니다.
+        # 내용이 같아도 저장소를 가리키는 링크는 로컬 일반 파일로 분리합니다.
+        detach_config = name == "config.toml" and destination.is_symlink()
+        if current == desired and not detach_config:
             print(f"유지: {destination}")
             continue
         print(f"{'변경 예정' if dry_run else '설치'}: {destination}")

@@ -86,6 +86,39 @@ class InstallTests(unittest.TestCase):
         self.assertEqual((self.target / "config.toml").read_text(), original)
         self.assertTrue((self.target / "fast.config.toml").is_file())
 
+    def test_identical_default_link_is_detached_without_changing_source(self):
+        self.target.mkdir(parents=True)
+        source = Path(self.temporary.name) / "shared.toml"
+        original = (INSTALLER.SOURCE / "config.toml").read_text(encoding="utf-8")
+        original += '\n[projects."/example/project"]\ntrust_level = "trusted"\n'
+        source.write_text(original, encoding="utf-8")
+        destination = self.target / "config.toml"
+        try:
+            destination.symlink_to(source)
+        except (OSError, NotImplementedError):
+            self.skipTest("이 환경에서는 심볼릭 링크를 만들 수 없습니다.")
+        backup = self.install()
+        self.assertFalse(destination.is_symlink())
+        self.assertEqual(destination.read_text(encoding="utf-8"), original)
+        self.assertEqual((backup / "config.toml").read_text(encoding="utf-8"), original)
+        destination.write_text(original + '\n# local change\n', encoding="utf-8")
+        self.assertEqual(source.read_text(encoding="utf-8"), original)
+
+    def test_dry_run_keeps_default_link_and_source(self):
+        self.target.mkdir(parents=True)
+        source = Path(self.temporary.name) / "shared.toml"
+        original = (INSTALLER.SOURCE / "config.toml").read_text(encoding="utf-8")
+        source.write_text(original, encoding="utf-8")
+        destination = self.target / "config.toml"
+        try:
+            destination.symlink_to(source)
+        except (OSError, NotImplementedError):
+            self.skipTest("이 환경에서는 심볼릭 링크를 만들 수 없습니다.")
+        self.install(dry_run=True)
+        self.assertTrue(destination.is_symlink())
+        self.assertEqual(source.read_text(encoding="utf-8"), original)
+        self.assertFalse((self.target / ".dotfiles-backups").exists())
+
     def test_invalid_config_is_not_replaced(self):
         self.target.mkdir(parents=True)
         original = 'model = "unterminated'

@@ -281,7 +281,7 @@ git diff -- ubuntu/inventory
 
 ## Codex 공통 설정
 
-모델 설정은 [common/codex/README.md](common/codex/README.md)에 별도로 정리했습니다. 적용 후 기본 질문은 `gpt-6-luna` / `low`, `codex --profile dev`는 기존 `gpt-6.1-sol` / `max`를 사용합니다. 질문 내용에 따른 자동 전환은 아니며, 같은 대화에서는 `/model`로 전환합니다.
+모델 설정은 [common/codex/README.md](common/codex/README.md)에 별도로 정리했습니다. 적용 후 기본 질문은 `gpt-5.6-luna` / `low`, `codex --profile dev`는 기존 `gpt-6.1-sol` / `max`를 사용합니다. 질문 내용에 따른 자동 전환은 아니며, 같은 대화에서는 `/model`로 전환합니다.
 
 ```bash
 python3 common/codex/install.py --dry-run
@@ -290,6 +290,8 @@ python3 common/codex/install.py
 
 이 설치기는 기존 설정을 백업하고 모델 관련 두 항목만 병합합니다. Ubuntu 설치 스크립트와는 독립적으로 실행하며, 현재 사용자 설정이나 인증 파일을 저장소에 수집하지 않습니다. 모델과 프로필 형식은 [공식 모델 안내](https://learn.chatgpt.com/docs/models) 및 [프로필 문서](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles)를 기준으로 확인했습니다.
 
+Codex의 기본 `~/.codex/config.toml`은 로컬 일반 파일로 유지합니다. 프로젝트 신뢰 설정·개인 경로·TUI 상태를 보존하면서 공유 모델 설정만 병합하며, 파일 전체를 저장소에 링크하지 않습니다. 공개 저장소 작업과 커밋 전 개인정보 점검 규칙은 [AGENTS.md](AGENTS.md)를 따릅니다.
+
 ## GitHub에 올리기
 
 로컬 Git 저장소는 `main` 브랜치를 사용합니다. 추가하거나 변경한 파일을 검토한 뒤 커밋하세요. 원격 저장소 생성과 업로드는 별도입니다.
@@ -297,7 +299,8 @@ python3 common/codex/install.py
 ```bash
 cd ~/dev/dotfiles
 git status --short
-git add .
+# 실제로 검토한 파일만 지정
+git add README.md ubuntu/config/zsh/.zshrc
 git diff --cached --stat
 git commit -m "Add Ubuntu terminal and Markdown dotfiles"
 
@@ -306,6 +309,6 @@ git remote add origin https://github.com/YOUR_GITHUB_USER/dotfiles.git
 git push -u origin main
 ```
 
-설정은 명시적으로 선정한 파일만 넣었습니다. SSH/AWS/Codex 인증, Git 자격 증명, 개인 이메일·이름, 명령어 기록, zoxide DB, 캐시, 다운로드한 폰트 및 `node_modules`는 수록하지 않았습니다. `.gitignore`도 이를 제외하도록 구성했습니다. 대화 전체 원문 대신 [구성 결정 및 변경 기록](ubuntu/docs/decisions.md)에 이번 구성의 선택과 수정 사항을 정리했습니다.
+설정은 명시적으로 선정한 파일만 넣습니다. SSH/AWS/Codex 인증, Git 자격 증명, 개인 이메일·이름, 명령어 기록, zoxide DB, 캐시, 다운로드한 폰트 및 `node_modules`는 공개 대상에서 제외합니다. `.gitignore`와 [AGENTS.md](AGENTS.md)를 함께 확인하고, 커밋 작성자·커미터 이메일에는 GitHub noreply 주소를 사용하세요. 이번 정리는 현재 파일과 앞으로의 커밋에 적용되며, 과거 커밋에 포함됐던 개인 이메일과 경로는 이력에 남아 있습니다. 대화 전체 원문 대신 [구성 결정 및 변경 기록](ubuntu/docs/decisions.md)에 구성의 선택과 수정 사항을 정리했습니다.
 
 설치 방식과 옵션은 [Starship 공식 가이드](https://starship.rs/guide/), [fzf 셸 통합](https://github.com/junegunn/fzf#setting-up-shell-integration), [vim-plug](https://github.com/junegunn/vim-plug), [Markdown 미리보기](https://github.com/iamcco/markdown-preview.nvim), [Windows Terminal 프로필 모양](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance)을 참고했습니다.

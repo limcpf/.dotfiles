@@ -6,8 +6,8 @@ Codex는 여러 운영체제에서 사용하는 도구이므로 모델 설정은
 
 | 용도 | 실행 명령 | 모델 | 추론 수준 |
 | --- | --- | --- | --- |
-| 일반 질문 기본값 | `codex` | GPT-6 Luna | low |
-| 빠른 질문을 명시적으로 선택 | `codex --profile fast` | GPT-6 Luna | low |
+| 일반 질문 기본값 | `codex` | `gpt-5.6-luna` | low |
+| 빠른 질문을 명시적으로 선택 | `codex --profile fast` | `gpt-5.6-luna` | low |
 | 개발·고난도 작업 | `codex --profile dev` | GPT-6.1 Sol | max |
 
 현재 로컬 설정의 `gpt-6.1-sol` / `max`를 개발 프로필에 보존했습니다. 단순한 질문에는 Luna / low를 속도 우선 출발점으로 선택했습니다. 공식 [모델 안내](https://learn.chatgpt.com/docs/models)와 [모델 선택 가이드](https://developers.openai.com/api/docs/guides/model-selection)를 참고했으며, 이 PC의 모델 목록에서도 두 모델과 지정한 추론 수준을 확인했습니다. 실측으로 항상 가장 빠르다고 보장하는 설정은 아닙니다.
@@ -59,6 +59,8 @@ py -3 common/codex/install.py
 
 이 파일들은 복사 방식으로 설치하므로 저장소의 모델을 수정한 뒤에는 설치기를 다시 실행합니다. 이미 열린 대화는 현재 선택이 유지될 수 있어 새 CLI 세션에서 확인하거나 `/model`로 직접 전환합니다. 프로젝트 설정이나 명시적인 실행 옵션이 기본값보다 우선할 수 있습니다.
 
+기본 `config.toml`은 로컬 일반 파일로 유지합니다. Codex가 기록하는 프로젝트 신뢰 경로와 TUI 상태가 저장소에 들어가지 않도록 파일 전체를 심볼릭 링크하지 않습니다. 설치기는 기존 기본 설정이 링크인 경우 내용이 같아도 원본을 로컬에 백업한 뒤 링크를 일반 파일로 교체합니다. `fast`/`dev`처럼 공유 항목만 담은 프로필은 링크로 사용할 수 있습니다. `config.local.toml` 같은 별도 파일의 자동 로드는 가정하지 않으며, 개인 설정은 실제 로컬 `config.toml` 안에 유지합니다.
+
 ## 프로필 파일 형식
 
 현재 CLI는 `fast.config.toml`처럼 프로필별 파일을 사용합니다. **0.134.0 이상**에서는 예전 `[profiles.fast]` 테이블이나 `profile = "fast"` 기본 선택기를 사용하지 않습니다. 파일의 모델 항목을 최상위에 두고 `--profile fast`로 선택합니다. [공식 프로필 문서](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles)에 따른 형식입니다.
@@ -74,4 +76,4 @@ py -3 common/codex/install.py
 python3 -m unittest discover -s common/codex/tests -v
 ```
 
-현재 WSL에서 8개 검증 항목(설정 보존·백업·재실행·dry-run·프로필만 설치·잘못된 TOML 처리 등)을 통과했습니다. CLI의 로컬 설정 로드와 모델 목록의 추론 수준도 확인했습니다. 실제 사용자 설정에는 dry-run만 실행했습니다. Windows 네이티브 설치, 모델 실제 요청 및 속도 벤치마크는 실행하지 않았습니다.
+임시 폴더의 테스트에서 설정 보존·백업·재실행·dry-run·프로필만 설치·잘못된 TOML 처리와 기본 설정 링크 분리를 검증합니다. 현재 WSL의 기본 설정은 로컬 파일로 분리하고 Luna / low를 병합했습니다. Windows 네이티브 설치, 모델 실제 요청 및 속도 벤치마크는 실행하지 않았습니다.
