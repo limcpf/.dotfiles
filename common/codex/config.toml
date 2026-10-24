@@ -1,7 +1,7 @@
 # 일반 질문은 빠른 응답에 맞춘 모델과 낮은 추론 수준을 사용합니다.
 # 개발 작업은 codex --profile dev로 시작합니다.
-model = "gpt-5.6-luna"
-model_reasoning_effort = "low"
+model = "gpt-6.1-sol"
+model_reasoning_effort = "high"
 
 [tui]
 screen_reader_detection_done = true
